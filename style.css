@@ -108,6 +108,7 @@
 
   .setting-left-top {
     grid-area: top-left;
+    /* opacity: 0; */
   }
 
   .setting-left-bottom {
@@ -125,6 +126,8 @@
   .border-radius-prewiewer__block {
     width: 100%;
     height: 100%;
+    border-radius: 50px;
+
     background-color: #fff;
   }
 

@@ -11,30 +11,40 @@ const inputLeftBottom = document.querySelector('.setting-left-bottom__input')
 const inputRightTop = document.querySelector('.setting-setting-right-top__input')
 const inputRightBottom = document.querySelector('.setting-right-bottom__input')
 
+inputLeftTop.value = '50'
+inputLeftBottom.value = '50'
+inputRightTop.value = '50'
+inputRightBottom.value = '50'
+
 const resizeRadiusLeftTop = () => {
-    block.style.borderTopLeftRadius = rangeLeftTop.value + 'px'
     inputLeftTop.value = rangeLeftTop.value
+    block.style.borderTopLeftRadius = rangeLeftTop.value + 'px'
     displayOutput()
 }
 
 const resizeRadiusLeftBottom = () => {
     block.style.borderBottomLeftRadius = rangeLeftBottom.value + 'px'
     inputLeftBottom.value = rangeLeftBottom.value
+    displayOutput()
 }
 
 const resizeRadiusRightTop = () => {
     block.style.borderTopRightRadius = rangeRightTop.value + 'px'
     inputRightTop.value = rangeRightTop.value
+    displayOutput()
 }
 
 const resizeRadiusRightBottom = () => {
     block.style.borderBottomRightRadius = rangeRightBottom.value + 'px'
     inputRightBottom.value = rangeRightBottom.value
+    displayOutput()
 }
 
 const displayOutput = () => {
-    display.innerText = `border-radius: ${rangeLeftTop.value}px`
+    display.innerText = `border-radius: ${inputLeftTop.value}px ${inputRightTop.value}px ${inputRightBottom.value}px ${inputLeftBottom.value}px`
 }
+
+displayOutput()
 
 
 
