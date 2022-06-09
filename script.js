@@ -14,14 +14,16 @@ const inputRightBottom = document.querySelector('.setting-right-bottom__input')
 
 
 const displayOutput = () => {
-    display.innerText = `border-radius: ${inputLeftTop.value}px ${inputRightTop.value}px ${inputRightBottom.value}px ${inputLeftBottom.value}px;`
+    display.innerText = `border-radius: ${inputLeftTop.value == '' ? '0' : inputLeftTop.value}px ${inputRightTop.value == '' ? '0' : inputRightTop.value}px ${inputRightBottom.value == '' ? '0' : inputRightBottom.value}px ${inputLeftBottom.value == '' ? '0' : inputLeftBottom.value}px;`
 }
+
+displayOutput()
 
 
 
 const resizeRadiusLeftTop = () => {
-    inputLeftTop.value = rangeLeftTop.value
     block.style.borderTopLeftRadius = rangeLeftTop.value + 'px'
+    inputLeftTop.value = rangeLeftTop.value
     displayOutput()
 }
 
@@ -46,26 +48,25 @@ const resizeRadiusRightBottom = () => {
 
 
 inputLeftTop.addEventListener('input', () => {
-    // inputLeftTop.value == '' ? inputLeftTop.value = 0 : inputLeftTop.value
-    rangeLeftTop.value = inputLeftTop.value
+    inputLeftTop.value == '' ? rangeLeftTop.value = 0 : rangeLeftTop.value = inputLeftTop.value
     block.style.borderTopLeftRadius = inputLeftTop.value + 'px'
     displayOutput()
 })
 
 inputLeftBottom.addEventListener('input', () => {
-    // inputLeftBottom.value == '' ? inputLeftBottom.value = 0 : inputLeftBottom.value
+    inputLeftBottom.value == '' ? rangeLeftBottom.value = 0 : rangeLeftBottom.value = inputLeftBottom.value
     block.style.borderBottomLeftRadius = inputLeftBottom.value + 'px'
     displayOutput()
 })
 
 inputRightTop.addEventListener('input', () => {
-    // inputRightTop.value == '' ? inputRightTop.value = 0 : inputRightTop.value
+    inputRightTop.value == '' ? rangeRightTop.value = 0 : rangeRightTop.value = inputRightTop.value
     block.style.borderTopRightRadius = inputRightTop.value + 'px'
     displayOutput()
 })
 
 inputRightBottom.addEventListener('input', () => {
-    // inputRightBottom.value == '' ? inputRightBottom.value = 0 : inputRightBottom.value
+    inputRightBottom.value == '' ? rangeRightBottom.value = 0 : rangeRightBottom.value = inputRightBottom.value
     block.style.borderBottomRightRadius = inputRightBottom.value + 'px'
     displayOutput()
 })
