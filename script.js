@@ -11,6 +11,9 @@ const inputLeftBottom = document.querySelector('.setting-left-bottom__input')
 const inputRightTop = document.querySelector('.setting-setting-right-top__input')
 const inputRightBottom = document.querySelector('.setting-right-bottom__input')
 
+const inputCustomWidth = document.querySelector('.custom__input-width')
+const inputCustomHeight = document.querySelector('.custom__input-height')
+
 
 
 const displayOutput = () => {
@@ -71,4 +74,15 @@ inputRightBottom.addEventListener('input', () => {
     displayOutput()
 })
 
+
+
+inputCustomWidth.addEventListener('input', () => {
+    inputCustomWidth.value >= 400 ? inputCustomWidth.value = 400 : inputCustomWidth.value
+    block.style.width = inputCustomWidth.value + 'px'
+})
+
+inputCustomHeight.addEventListener('input', () => {
+    inputCustomHeight.value >= 400 ? inputCustomHeight.value = 400 : inputCustomHeight.value
+    block.style.height = inputCustomHeight.value + 'px'
+})
 

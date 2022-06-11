@@ -8,35 +8,50 @@
     <title>Border-radius Prewiewer</title>
 </head>
 <body>
+    <div class="test"></div>
+    
     <main class="main">
         <header class="header">Border Radius Prewiewer</header>
-        <div class="border-radius-prewiewer">
+        <section class="border-radius-prewiewer">
 
             <div class="border-radius-prewiewer__setting setting-left-top">
-                <input class="setting-left-top__range range" type="range" oninput="resizeRadiusLeftTop()" value="0">
-                <input class="setting-left-top__input input" type="text" value="0">
+                <input class="setting-left-top__range range" type="range" oninput="resizeRadiusLeftTop()" max="400" value="100">
+                <input class="setting-left-top__input input" type="text" value="100">
             </div>
 
             <div class="border-radius-prewiewer__setting setting-left-bottom">
-                <input class="setting-left-bottom__range range" type="range" oninput="resizeRadiusLeftBottom()" value="0">
-                <input class="setting-left-bottom__input input" type="text" value="0">
+                <input class="setting-left-bottom__range range" type="range" oninput="resizeRadiusLeftBottom()" max="400" value="100">
+                <input class="setting-left-bottom__input input" type="text" value="100">
             </div>
 
-            <div class="border-radius-prewiewer__container">
-                <div class="border-radius-prewiewer__block"></div>
-            </div>
+            <div class="border-radius-prewiewer__block"></div>
             <div class="border-radius-prewiewer__display"></div>
 
+            <div class="border-radius-prewiewer__custom custom">
+                <p class="custom__text">Custom size</p>
+
+                <div class="custom__container-width">
+                    <label class="custom__label-width label">Width</label>
+                    <input class="custom__input-width input" type="text" value="300">
+                </div>
+
+                <div class="custom__container-height">
+                    <label class="custom__label-height label">Height</label>
+                    <input class="custom__input-height input" type="text" value="300">
+                </div>
+                
+            </div>
+
             <div class="border-radius-prewiewer__setting setting-right-top">
-                <input class="setting-setting-right-top__range range" type="range" oninput="resizeRadiusRightTop()" value="0">
-                <input class="setting-setting-right-top__input input" type="text" value="0">
+                <input class="setting-setting-right-top__range range" type="range" oninput="resizeRadiusRightTop()"  max="400" value="100">
+                <input class="setting-setting-right-top__input input" type="text" value="100">
             </div>
 
             <div class="border-radius-prewiewer__setting setting-right-bottom">
-                <input class="setting-right-bottom__range range" type="range" oninput="resizeRadiusRightBottom()" value="0">
-                <input class="setting-right-bottom__input input" type="text" value="0">
+                <input class="setting-right-bottom__range range" type="range" oninput="resizeRadiusRightBottom()" max="400" value="100">
+                <input class="setting-right-bottom__input input" type="text" value="100">
             </div>
-        </div>
+        </section>
     </main>
     
     <script src="./script.js"></script>
