@@ -51,24 +51,28 @@ const resizeRadiusRightBottom = () => {
 
 
 inputLeftTop.addEventListener('input', () => {
+    inputLeftTop.value > 400 ? inputLeftTop.value = 400 : inputLeftTop.value
     inputLeftTop.value == '' ? rangeLeftTop.value = 0 : rangeLeftTop.value = inputLeftTop.value
     block.style.borderTopLeftRadius = inputLeftTop.value + 'px'
     displayOutput()
 })
 
 inputLeftBottom.addEventListener('input', () => {
+    inputLeftBottom.value > 400 ? inputLeftBottom.value = 400 : inputLeftBottom.value
     inputLeftBottom.value == '' ? rangeLeftBottom.value = 0 : rangeLeftBottom.value = inputLeftBottom.value
     block.style.borderBottomLeftRadius = inputLeftBottom.value + 'px'
     displayOutput()
 })
 
 inputRightTop.addEventListener('input', () => {
+    inputRightTop.value > 400 ? inputRightTop.value = 400 : inputRightTop.value
     inputRightTop.value == '' ? rangeRightTop.value = 0 : rangeRightTop.value = inputRightTop.value
     block.style.borderTopRightRadius = inputRightTop.value + 'px'
     displayOutput()
 })
 
 inputRightBottom.addEventListener('input', () => {
+    inputRightBottom.value > 400 ? inputRightBottom.value = 400 : inputRightBottom.value
     inputRightBottom.value == '' ? rangeRightBottom.value = 0 : rangeRightBottom.value = inputRightBottom.value
     block.style.borderBottomRightRadius = inputRightBottom.value + 'px'
     displayOutput()
@@ -77,7 +81,7 @@ inputRightBottom.addEventListener('input', () => {
 
 
 inputCustomWidth.addEventListener('input', () => {
-    inputCustomWidth.value >= 400 ? inputCustomWidth.value = 400 : inputCustomWidth.value
+    inputCustomWidth.value > 400 ? inputCustomWidth.value = 400 : inputCustomWidth.value
     block.style.width = inputCustomWidth.value + 'px'
 })
 
